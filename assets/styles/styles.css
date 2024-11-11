@@ -1,0 +1,244 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.topButton {
+    width: 20%;
+    height: 2.5em;
+    margin-top: 1em;
+    background-color: green;
+    color: white;
+    font-size: 1.5em;
+    font-weight: 800;
+    border: 0.1em white solid;
+    border-radius: 5em;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+#headArea {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.topButton:hover {
+    background-color: #00cc00;
+}
+
+#postArea {
+    width: 100vw;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.post {
+    width: 80%;
+    margin-top: 1em;
+    padding: 1em;
+    background-color: #f0f0f0;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post-title {
+    font-size: 1.5em;
+    font-weight: 800;
+    text-align: center;
+}
+
+.post-body {
+    font-size: 1.2em;
+    font-weight: 400;
+    text-align: center;
+}
+
+#header {
+    width: 80vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+.close {
+    position: absolute;
+    margin-right: 1em;
+    margin-top: 1em;
+    margin-left: 70vw;
+    height: 2em;
+    width: 2em;
+    background-color: darkgray;
+    border: none;
+    border-radius: 50%;
+    color: white;
+}
+
+.close:hover {
+    background-color: red;
+}
+
+@media screen and (max-width: 768px) {
+    .topButton {
+        width: 80%;
+        margin-left: 10vw;
+    }
+
+    .close {
+        height: 30px;
+        width: 30px;
+    }
+
+    .post-title {
+        margin-right: 10vw;
+    }
+
+    #headArea {
+        flex-direction: column;
+    }
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* The Close Button in Modal */
+.closeBtn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.closeBtn:hover,
+.closeBtn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Modal Overlay */
+/* Modal Overlay */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+    /* Remove the display: flex; here */
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Modal Content Box */
+.modal-content {
+    background-color: #ffffff;
+    padding: 2em;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    position: relative;
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* The Close Button in Modal */
+.closeBtn {
+    color: #333;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.closeBtn:hover,
+.closeBtn:focus {
+    color: #ff0000;
+    text-decoration: none;
+}
+
+/* Confirmation Buttons */
+.modal-button {
+    margin-top: 1.5em;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.modal-button .btn {
+    padding: 0.5em 1.5em;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+#yesButton {
+    background-color: #28a745;
+    color: white;
+    width : 20vw;
+    height : 5vh;
+    margin-top: 1em;
+    font-size: 1em;
+    border-radius: 5em;
+    border: none;
+}
+
+#yesButton:hover {
+    background-color: #218838;
+}
+
+#noButton {
+    background-color: #dc3545;
+    color: white;
+}
+
+#noButton:hover {
+    background-color: #c82333;
+}
